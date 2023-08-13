@@ -160,3 +160,32 @@ function findFirstPrime() {
     var primeInput = document.getElementById("primeInput");
     primeInput.value = firstPrime !== null ? firstPrime : "Không có số nguyên tố";
 }
+
+function processFloatArray() {
+    var floatInput = document.getElementById("floatInput").value;
+    var floatArray = floatInput.split(",").map(Number);
+
+    var integerCount = 0;
+    var positiveCount = 0;
+    var negativeCount = 0;
+
+    for (var i = 0; i < floatArray.length; i++) {
+        if (Number.isInteger(floatArray[i])) {
+            integerCount++;
+        }
+        if (floatArray[i] > 0) {
+            positiveCount++;
+        } else if (floatArray[i] < 0) {
+            negativeCount++;
+        }
+    }
+
+    var resultCountIntegers = document.getElementById("resultCountIntegers");
+    resultCountIntegers.textContent = "Số lượng số nguyên trong mảng: " + integerCount;
+
+    var resultPositive = document.getElementById("resultPositive");
+    resultPositive.textContent = "Số lượng số dương: " + positiveCount;
+
+    var resultNegative = document.getElementById("resultNegative");
+    resultNegative.textContent = "Số lượng số âm: " + negativeCount;
+}
