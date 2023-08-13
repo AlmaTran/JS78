@@ -8,10 +8,15 @@
 </head>
 <body>
     <div id="container">
-        
-        <label for="integerInput">Nhập các số nguyên :</label>
+        <label for="integerInput">Nhập các số nguyên:</label>
         <input type="text" id="integerInput">
-        <button onclick="calculateSum()">Tính tổng</button>
+        <button onclick="addToIntegerArray()">Thêm vào mảng</button>
+        <p id="arrayDisplay"></p>
+        
+        
+        <button onclick="calculateSumOfPositiveNumbers()">Tính tổng số dương</button>
+        <p id="arrayDisplay"></p>
+        <p id="sumDisplay"></p>
         
         <div id="result"></div>
         <label for="countPositiveInput">Đếm số lượng số dương:</label>
@@ -30,15 +35,16 @@
         <input type="text" id="lastEvenInput">
         <button onclick="findLastEven()">Tìm</button>
         
+        <label for="sortInput">Sắp xếp mảng tăng dần:</label>
+        <input type="text" id="sortInput">
+        <button onclick="sortArray()">Sắp xếp</button>
+
         <label for="swapInput1">Vị trí 1 muốn đổi chỗ:</label>
         <input type="text" id="swapInput1">
         <label for="swapInput2">Vị trí 2 muốn đổi chỗ:</label>
         <input type="text" id="swapInput2">
         <button onclick="swapValues()">Đổi chỗ</button>
         
-        <label for="sortInput">Sắp xếp mảng tăng dần:</label>
-        <input type="text" id="sortInput">
-        <button onclick="sortArray()">Sắp xếp</button>
         
         <label for="primeInput">Tìm số nguyên tố đầu tiên:</label>
         <input type="text" id="primeInput">
@@ -47,6 +53,7 @@
         <label for="floatInput">Nhập mảng số thực :</label>
         <input type="text" id="floatInput">
         <button onclick="countIntegersInFloatArray()">Đếm số nguyên</button>
+        <p id="result"></p>
         
         <button onclick="comparePosNeg()">So sánh số dương và số âm</button>
         
